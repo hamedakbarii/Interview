@@ -1,5 +1,11 @@
 import React from "react";
 
 export default function Home() {
-  return <div>This is Home Page</div>;
+  fetch("/", {
+    method: "Get",
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+
+  return <div>This is Home page</div>;
 }

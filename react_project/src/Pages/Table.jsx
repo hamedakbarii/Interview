@@ -111,7 +111,7 @@ const rows = [
 
 export default function Table() {
   return (
-    <div style={{ height: 400, width: "100%", gridColumn: "2/4" }}>
+    <div style={{ height: 400, width: "100%" }}>
       <DataGrid
         rows={rows}
         columns={columns}

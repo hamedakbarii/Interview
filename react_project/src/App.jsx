@@ -7,9 +7,8 @@ export default function App() {
   const router = useRoutes(routes);
 
   return (
-    <div className="grid grid-cols-3 m-2">
+    <div className="flex flex-col gap-4 md:flex-row w-full mt-10 p-6">
       <Sidebar />
-
       {router}
     </div>
   );

@@ -1,50 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AttachMoney,
   BarChart,
-  ChatBubbleOutline,
   DynamicFeed,
   LineStyle,
-  MailOutline,
-  MessageOutlined,
-  PermIdentity,
-  Timeline,
-  TrendingUp,
-  // PermIdentityIcon,
 } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Sidebar() {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <section className="p-2 bg-gray-50 w-[350px] h-[350px] shadow-lg">
-      <ul className="p-2 flex flex-col justify-center items-start w-full gap-6">
-        <Link to="/" className="w-full">
-          <li className="flex justify-start items-center gap-2 p-2 hover:bg-gray-200 transition-all">
+    <section className="p-2 bg-gray-50 w-full md:w-[350px] h-[350px] shadow-lg">
+      <ul className="p-2 flex flex-col justify-center items-center md:items-start w-full gap-6">
+        <NavLink activeClassName="active" to="/" className={`w-full`}>
+          <li className="flex justify-start items-center gap-2 p-2  transition-all">
             <LineStyle />
             Home
           </li>
-        </Link>
+        </NavLink>
 
-        <Link to="/layout" className="w-full">
-          <li className="flex justify-start items-center gap-2 p-2 hover:bg-gray-200 transition-all">
+        <NavLink to="/layout" activeClassName="active" className="w-full">
+          <li className="flex justify-start items-center gap-2 p-2  transition-all">
             <AttachMoney />
             Layout
           </li>
-        </Link>
+        </NavLink>
 
-        <Link to="/table" className="w-full">
-          <li className="flex justify-start items-center gap-2 p-2 hover:bg-gray-200 transition-all">
+        <NavLink to="/table" activeClassName="active" className="w-full">
+          <li className="flex justify-start items-center gap-2 p-2  transition-all">
             <BarChart />
             Table
           </li>
-        </Link>
+        </NavLink>
 
-        <Link to="/searchbar" className="w-full">
-          <li className="flex justify-start items-center gap-2 p-2 hover:bg-gray-200 transition-all">
+        <NavLink to="/searchbar" activeClassName="active" className="w-full">
+          <li className="flex justify-start items-center gap-2 p-2  transition-all">
             <DynamicFeed />
             SearchBar
           </li>
-        </Link>
+        </NavLink>
       </ul>
     </section>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
+import { Paper, Typography } from "@mui/material";
 
 const columns = [
   { field: "id", headerName: "ردیف", width: 70 },
@@ -8,12 +9,11 @@ const columns = [
     headerName: "شماره پرسنلی",
     type: "number",
     width: 100,
+    align: "center",
   },
   {
     field: "fullName",
     headerName: "نام و نام خانوادگی",
-
-    sortable: true,
     width: 160,
     valueGetter: (params) =>
       `${params.row.firstName || ""} ${params.row.lastName || ""}`,
@@ -21,14 +21,13 @@ const columns = [
   {
     field: "signUpDate",
     headerName: "تاریخ استخدام",
-
+    // align: "left",
     sortable: true,
     width: 160,
   },
   {
     field: "YearsOfService",
     headerName: "سابقه خدمت",
-
     sortable: true,
     width: 160,
   },
@@ -109,20 +108,25 @@ const rows = [
   },
 ];
 
-export default function Table() {
+export default function TableComp() {
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-        checkboxSelection
-      />
-    </div>
+    <>
+      <div className="w-[800px] m-0 m-auto mt-10 h-[450px] flex flex-col items-center gap-4">
+        <Typography variant="h3" component="h3">
+          Table
+        </Typography>
+        <DataGrid
+          component={Paper}
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 5 },
+            },
+          }}
+          pageSizeOptions={[1, 2]}
+        />
+      </div>
+    </>
   );
 }

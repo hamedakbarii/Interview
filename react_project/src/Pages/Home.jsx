@@ -7,9 +7,5 @@ export default function Home() {
   //   .then((response) => response.json())
   //   .then((data) => console.log(data));
 
-  return (
-    <div className="border w-full flex justify-center items-center">
-      This is Home page
-    </div>
-  );
+  return <div className="border w-full">This is Home page</div>;
 }

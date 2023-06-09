@@ -3,7 +3,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function Searchbar() {
   return (
-    <div className="border rounded-lg w-full flex justify-center items-center">
+    <div className="border rounded-lg w-[1200px] h-[550px] flex justify-center items-center m-0 m-auto mt-2">
       <div className="w-80 border border-gray-500 p-2 rounded-lg text-sm flex justify-between">
         <input
           type="text"

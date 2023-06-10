@@ -11,7 +11,7 @@ export default function RouterBar() {
   return (
     <section className="bg-gray-50 w-full shadow-lg">
       <ul className="p-2 flex justify-start items-center md:items-start w-full gap-6">
-        <NavLink activeClassName="active" to="/" className="w-80px rounded-lg">
+        <NavLink activeclassname="active" to="/" className="w-80px rounded-lg">
           <li className="flex justify-start items-center gap-2 p-2 transition-all">
             <LineStyle />
             Home
@@ -20,7 +20,7 @@ export default function RouterBar() {
 
         <NavLink
           to="/layout"
-          activeClassName="active"
+          activeclassname="active"
           className="w-80px rounded-lg"
         >
           <li className="flex justify-start items-center gap-2 p-2  transition-all">
@@ -31,7 +31,7 @@ export default function RouterBar() {
 
         <NavLink
           to="/table"
-          activeClassName="active"
+          activeclassname="active"
           className="w-80px rounded-lg"
         >
           <li className="flex justify-start items-center gap-2 p-2  transition-all">
@@ -42,7 +42,7 @@ export default function RouterBar() {
 
         <NavLink
           to="/searchbar"
-          activeClassName="active"
+          activeclassname="active"
           className="w-80px rounded-lg"
         >
           <li className="flex justify-start items-center gap-2 p-2  transition-all">

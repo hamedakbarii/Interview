@@ -26,7 +26,7 @@ const columns = [
     width: 160,
   },
   {
-    field: "YearsOfService",
+    field: "yearsOfService",
     headerName: "سابقه خدمت",
     sortable: true,
     width: 160,
@@ -40,7 +40,7 @@ const rows = [
     firstName: "حامد",
     personalNumber: 35,
     signUpDate: "1382 , 04 , 22",
-    YearsOfService: "دارد",
+    yearsOfService: "دارد",
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const rows = [
     firstName: "مجید",
     personalNumber: 42,
     signUpDate: "1380 , 12 , 14",
-    YearsOfService: "دارد",
+    yearsOfService: "دارد",
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const rows = [
     firstName: "صادق",
     personalNumber: 45,
     signUpDate: "1381 , 10 , 23",
-    YearsOfService: "ندارد",
+    yearsOfService: "ندارد",
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const rows = [
     firstName: "حمیدرضا",
     personalNumber: 16,
     signUpDate: "1375 , 07 , 08",
-    YearsOfService: "دارد",
+    yearsOfService: "دارد",
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const rows = [
     firstName: "امیر",
     personalNumber: 13,
     signUpDate: "1382 , 04 , 22",
-    YearsOfService: "ندارد",
+    yearsOfService: "ندارد",
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ const rows = [
     firstName: "یگانه",
     personalNumber: 150,
     signUpDate: "1382 , 05 , 15",
-    YearsOfService: "ندارد",
+    yearsOfService: "ندارد",
   },
   {
     id: 7,
@@ -88,7 +88,7 @@ const rows = [
     firstName: "ریموند",
     personalNumber: 44,
     signUpDate: "1378 , 03 , 26",
-    YearsOfService: "دارد",
+    yearsOfService: "دارد",
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ const rows = [
     firstName: "حسینی",
     personalNumber: 36,
     signUpDate: "1382 , 04 , 08",
-    YearsOfService: "دارد",
+    yearsOfService: "دارد",
   },
   {
     id: 9,
@@ -104,7 +104,7 @@ const rows = [
     firstName: "رنجور",
     personalNumber: 65,
     signUpDate: "1369 , 06 , 01",
-    YearsOfService: "دارد",
+    yearsOfService: "دارد",
   },
 ];
 

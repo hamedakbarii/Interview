@@ -1,7 +1,7 @@
-import Home from "./Pages/Home";
-import Layout from "./Pages/Layout";
-import Searchbar from "./Pages/Searchbar";
-import Table from "./Pages/TableComp";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+import Searchbar from "./pages/Searchbar";
+import Table from "./pages/TableComp";
 
 const routes = [
   { path: "/", element: <Home /> },

@@ -35,16 +35,18 @@ const options = {
 
 // initialize
 const fuse = new Fuse(countries, options);
-let fuseResult;
+// let fuseResult;
 
 app.get('/', (req, res) => {
-  const query = req.query.q;
-  fuseResult = fuse.search(query).slice(0, 10);
+  // const query = req.query.q;
+  // fuseResult = fuse.search(query).slice(0, 10);
+
+  let country = countries.slice(0, 10);
 
   return res.status(200).json({
     status: 'success',
     data: {
-      results: fuseResult,
+      results: country,
     },
   });
 });

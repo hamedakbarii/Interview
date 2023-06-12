@@ -111,11 +111,12 @@ const rows = [
 export default function TableComp() {
   return (
     <>
-      <div className="w-[800px] m-0 m-auto mt-10 h-[450px] flex flex-col items-center gap-4">
+      <div className="w-[800px] m-0 m-auto mt-10 h-[450px] flex flex-col items-center gap-4 ">
         <Typography variant="h3" component="h3">
           Table
         </Typography>
         <DataGrid
+          sx={{ borderRadius: "1rem", fontSize: "1rem" }}
           component={Paper}
           rows={rows}
           columns={columns}

@@ -1,28 +1,39 @@
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useQuery } from "react-query";
+// import ChartComp from "../components/ChartComp/ChartComp";
 
 export default function Searchbar() {
-  // const [countryName, setCountryName] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // fetch("http://localhost:3000/", {
-  //   method: "Get",
-  // })
-  //   .then((response) => response.json())
-  //   .then((data) => setCountryName(data));
+  const { data, isLoading, error } = useQuery("myData", () => {
+    return fetch(`http://localhost:3000/?q=${searchQuery}`)
+      .then((res) => res.json())
+      .then((json) => console.log(json));
+  });
+
+  if (isLoading) {
+    return <p className="text-center">Loading...</p>;
+  }
+
+  if (error) {
+    return <p className="text-center">An error occurred: {error.message}</p>;
+  }
 
   return (
-    <div className="border rounded-lg w-[1200px] h-[550px] flex justify-center items-center m-0 m-auto mt-2">
-      <div className="w-80 border border-gray-500 p-2 rounded-lg text-sm flex justify-between">
+    <div className="border rounded-lg w-[1200px] h-[550px] flex flex-col justify-center items-center gap-10 p-4 m-0 m-auto mt-2">
+      <div className="w-96 border border-gray-500 p-2 rounded-lg text-sm flex justify-between shadow-lg">
         <input
           type="text"
           placeholder="Type Country Name..."
           className="outline-none w-full"
-          // onChange={(e) => setCountryName(e.target.value)}
-          // value={countryName}
         />
         <KeyboardArrowDownIcon className="text-gray-500" />
       </div>
-      {/* {countryName} */}
+
+      {/* <div>
+        <ChartComp countryCode={searchQuery} />
+      </div> */}
     </div>
   );
 }

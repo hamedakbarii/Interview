@@ -4,12 +4,10 @@ import { useQuery } from "react-query";
 // import ChartComp from "../components/ChartComp/ChartComp";
 
 export default function Searchbar() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("ir");
 
   const { data, isLoading, error } = useQuery("myData", () => {
-    return fetch(`http://localhost:3000/?q=${searchQuery}`)
-      .then((res) => res.json())
-      .then((json) => console.log(json));
+    return fetch(`http://localhost:3000/?q=${searchQuery}`);
   });
 
   if (isLoading) {
@@ -30,6 +28,8 @@ export default function Searchbar() {
         />
         <KeyboardArrowDownIcon className="text-gray-500" />
       </div>
+
+      <div>test</div>
 
       {/* <div>
         <ChartComp countryCode={searchQuery} />

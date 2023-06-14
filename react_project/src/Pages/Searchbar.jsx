@@ -24,14 +24,6 @@ export default function Searchbar() {
     }
   );
 
-  if (isLoading) {
-    return <p className="text-center">Loading...</p>;
-  }
-
-  if (error) {
-    return <p className="text-center">An error occurred: {error.message}</p>;
-  }
-
   return (
     <div className="border rounded-lg w-[1200px] h-[550px] flex flex-col justify-center items-center gap-10 p-4 m-0 m-auto mt-2">
       <div className="w-96 border border-gray-500 p-2 rounded-lg text-sm flex justify-between shadow-lg">
@@ -45,6 +37,12 @@ export default function Searchbar() {
         />
         <KeyboardArrowDownIcon className="text-gray-500" />
       </div>
+
+      {isLoading && <p className="text-center">Loading...</p>}
+
+      {error && (
+        <p className="text-center">An error occurred: {error.message}</p>
+      )}
 
       {showData && showData.length !== 0 && (
         <div className="flex flex-col justify-center items-center w-full gap-16">

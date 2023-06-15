@@ -44,9 +44,12 @@ export default function Searchbar() {
         <p className="text-center">An error occurred: {error.message}</p>
       )}
 
-      {showData && showData.length !== 0 && (
+      {showData.length > 0 && (
         <div className="flex flex-col justify-center items-center w-full gap-16">
-          <select className="border p-2 border-gray-400 rounded-lg">
+          <select
+            className="border p-2 border-gray-400 rounded-lg"
+            value={showData}
+          >
             {showData.map((country) => (
               <option key={country.item.code}>{country.item.name}</option>
             ))}
